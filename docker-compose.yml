@@ -2,6 +2,7 @@ version: '3'
 services:
   backend:
     image: registry.gitlab.propulsion-home.ch/full-stack/batch-15-february-2021/full-stack-motion-projects/back-end-pain/12eyes_second_try:latest
+
     restart: always
     env_file:
       - ./envs/dev.env
