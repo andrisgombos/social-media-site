@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'registration',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -140,6 +141,9 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=10)
 }
+
+# custom user model
+AUTH_USER_MODEL = 'user.User'
 
 STATIC_ROOT = '/static-files/'
 STATIC_URL = '/static-files/'
