@@ -11,10 +11,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import ast
 import os
+import django
+
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the app like this: BASE_DIR / 'subdir'.
-import django
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+
+    'app',
+    'app.registration'
 ]
 
 MIDDLEWARE = [
@@ -128,6 +135,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=10)
 }
 
 STATIC_ROOT = '/static-files/'
