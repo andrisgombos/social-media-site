@@ -3,6 +3,8 @@ import { BottomButtons,InputContainer,Main,LeftSection,RightSection,Personal,Int
 import {PurpleButton} from '../../../style/buttons'
 import { MotionInput } from '../../../style/inputs';
 
+// this is just a test
+
 
 
 
