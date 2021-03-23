@@ -1,10 +1,12 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-# Create your models here.
+
 class User(AbstractUser):
+    # Field used for authentication
     USERNAME_FIELD = 'email'
 
+    # Additional field when creating a user with createsuperuser
     REQUIRED_FIELDS = ['username']
 
     email = models.EmailField(unique=True)
