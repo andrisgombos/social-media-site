@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your tests here.
-from backend.userprofile.models import Userprofile
+from userprofile.models import Userprofile
 
 
 class FriendRequest(models.Model):

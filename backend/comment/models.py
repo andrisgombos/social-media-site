@@ -1,8 +1,8 @@
 from django.db import models
 
 # Create your models here.
-from backend.post.models import Post
-from backend.userprofile.models import Userprofile
+from post.models import Post
+from userprofile.models import Userprofile
 
 
 class Comment(models.Model):

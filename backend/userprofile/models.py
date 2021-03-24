@@ -26,14 +26,14 @@ class Userprofile(models.Model):
 
     i_follow = models.ManyToManyField(
         to='self',
-        related_name='my_followers',
+        related_name='following',
         blank=True,
         symmetrical=False
     )
 
     my_followers = models.ManyToManyField(
         to='self',
-        related_name='i_follow',
+        related_name='followers',
         blank=True,
         symmetrical=False
     )
