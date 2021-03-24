@@ -46,6 +46,12 @@ INSTALLED_APPS = [
     'rest_framework',
     # my apps
     'user',
+    'userprofile',
+    'post',
+    'auth',
+    'friendrequest',
+    'comment',
+    'image',
 ]
 
 MIDDLEWARE = [
