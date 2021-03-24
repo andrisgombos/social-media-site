@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from backend.userprofile.models import Userprofile
+from userprofile.models import Userprofile
 
 
 class Post(models.Model):
