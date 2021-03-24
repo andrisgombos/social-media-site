@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'user',
     'userprofile',
     'post',
-    # 'auth',
+    'auth',
     'friendrequest',
     'comment',
     'image',
