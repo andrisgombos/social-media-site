@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from backend.comment.models import Post
+from comment.models import Post
 
 
 class Image(models.Model):
