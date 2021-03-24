@@ -1,4 +1,3 @@
-#test mario
 
 """
 Django settings for app project.
@@ -28,7 +27,7 @@ SECRET_KEY = 'qu8oi-5miaz0wu9_^fa_ojh^5*^!^k*_glmr5cfu8lrmi=xyz4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = ast.literal_eval(os.environ.get('DJANGO_DEBUG'))
-#DEBUG = True
+# DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,10 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # third patry apps
     'rest_framework',
-    
-    'user'
+    # my apps
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -93,8 +92,6 @@ DATABASES = {
     }
 }
 
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -112,7 +109,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -138,4 +134,4 @@ STATIC_URL = '/static-files/'
 MEDIA_ROOT = '/media-files/'
 MEDIA_URL = '/media-files/'
 
-#comment
+# comment
