@@ -18,7 +18,7 @@ class Post(models.Model):
 
     liked_by = models.ManyToManyField(
         to=Userprofile,
-        related_name='userprofile',
+        related_name='liked_posts',
         blank=True
     )
 
