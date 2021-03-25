@@ -29,7 +29,7 @@ class RegistrationApiView(GenericAPIView):
             'Your Motion login code',
             f'Hello {new_user.username}, \nPlease use the following code to validate your email address and update your account: {registration.code}.\n'
             f'Thank you for joining the world of Motion',
-            'joost.motion@gmail.com',
+            'backpain135@gmail.com',
             [f'{new_user.email}'],
             fail_silently=False,
         )
