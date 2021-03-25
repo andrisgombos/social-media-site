@@ -15,7 +15,7 @@ User = get_user_model()
 
 class RegistrationApiView(GenericAPIView):
     permission_classes = []
-    #
+
     def post(self, request, *args, **kwargs):
         email = request.data.get('email')
         new_user = User(email=email, username=email, is_active=False)
@@ -35,6 +35,7 @@ class RegistrationApiView(GenericAPIView):
         )
 
         return Response(status=200)
+
 
 class Validation(GenericAPIView):
     permission_classes = []

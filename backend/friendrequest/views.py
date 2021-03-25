@@ -7,6 +7,7 @@ from friendrequest.serializers.friendserialzier import Friend_serializer
 
 from backend.friendrequest.models import FriendRequest
 
+
 class Create_friendship(CreateAPIView):
     serializer_class = Friend_serializer
     queryset = Userprofile.objects.all()

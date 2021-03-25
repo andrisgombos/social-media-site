@@ -1,9 +1,10 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
-#from post.models import Post
+# from post.models import Post
 
 
 User = get_user_model()
+
 
 class UserSerializer(serializers.ModelSerializer):
     # logged_in_user_is_following = serializers.SerializerMethodField()
@@ -31,4 +32,3 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'email', 'first_name', 'last_name', 'username', 'is_active']
         read_only_fields = ['email']
-

@@ -1,6 +1,9 @@
 from rest_framework import serializers
+
+from backend import post
 from models import Post
 from userprofile.serializers import UserSerializer
+
 
 class PostSerializer(serializers.ModelSerializer):
     user = UserSerializer(ready_only=True)
