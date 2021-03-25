@@ -28,7 +28,7 @@ export default function Verification(props) {
             first_name: first_name,
             last_name: last_name,
         }
-        const varificationUrl = "https://motion.propulsion-home.ch/backend/api/auth/registration/validation/";
+        const varificationUrl = "https://backpain.propulsion-learn.ch/backend/api/auth/registration/validation";
         const config = {
             method: "PATCH",
             body: JSON.stringify(varificationCredentials),
