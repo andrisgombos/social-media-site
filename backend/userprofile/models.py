@@ -39,8 +39,8 @@ class Userprofile(models.Model):
     changed_when = models.DateTimeField(auto_now=True)
     created_when = models.DateTimeField(auto_now_add=True)
 
-    def str(self):
-        return f'{self.id}: Profile from {self.user.username}'
+    def __str__(self):
+        return f'{self.id}: profile from {self.user.username}'
 
     @receiver(post_save, sender=User)
     def create_registration_profile(sender, instance, **kwargs):
