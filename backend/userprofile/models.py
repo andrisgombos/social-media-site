@@ -8,7 +8,7 @@ User = settings.AUTH_USER_MODEL
 
 
 class Userprofile(models.Model):
-    user = models.OneToOneField(to=User, on_delete=models.CASCADE, related_name='userprofile')
+    user = models.OneToOneField(to=User, on_delete=models.CASCADE, related_name='userprofile', blank=True)
     avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
     location = models.CharField(max_length=255, blank=True)
     phone = models.CharField(max_length=255, blank=True)
@@ -24,14 +24,7 @@ class Userprofile(models.Model):
 
     i_follow = models.ManyToManyField(
         to='self',
-        related_name='following',
-        blank=True,
-        symmetrical=False
-    )
-
-    my_followers = models.ManyToManyField(
-        to='self',
-        related_name='followers',
+        related_name='my_followers',
         blank=True,
         symmetrical=False
     )
