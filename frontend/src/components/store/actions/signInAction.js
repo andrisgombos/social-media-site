@@ -1,6 +1,6 @@
 export const signInAction = (credentials, history) => {
     return (dispatch, getState) => {
-        const url = "https://motion.propulsion-home.ch/backend/api/auth/token/";
+        const url = "https://backpain.propulsion-learn.ch/backend/api/auth/token/";
     const config = {
       method: "POST",
       body: JSON.stringify(credentials),
