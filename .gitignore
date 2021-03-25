@@ -1,7 +1,8 @@
 .idea
 # dependencies
 frontend/node_modules
-/node_modules
+frontend/node_modules/*
+node_modules/
 /.pnp
 .pnp.js
 
@@ -22,6 +23,9 @@ frontend/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pycache
+__pychache__
 */__pycache__/*
+**/__pycache__/**
 *.pyc
 *.pyo
