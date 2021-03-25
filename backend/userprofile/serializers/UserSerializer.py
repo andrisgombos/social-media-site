@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
-# from app.social.models import Post
+#from post.models import Post
 
 
 User = get_user_model()
