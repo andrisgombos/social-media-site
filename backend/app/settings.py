@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'user',
     'userprofile',
     'post',
-    'auth_code',
+    'registration',
     'friendrequest',
     'comment',
     'image',
