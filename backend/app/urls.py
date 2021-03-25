@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from rest_framework_simplejwt.views import TokenRefreshView, TokenVerifyView, TokenObtainPairView
 
 urlpatterns = [
     path('backend/admin/', admin.site.urls),
     # registration
+    path('registration/', include('registration.urls')),
     path('backend/api/auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('backend/api/auth/token/refresh/', TokenRefreshView.as_view(), name='retrieve-refreshed-token'),
     path('backend/api/auth/token/verify/', TokenVerifyView.as_view(), name='verify-token'),

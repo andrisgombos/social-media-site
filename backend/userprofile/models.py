@@ -4,6 +4,7 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
 User = settings.AUTH_USER_MODEL
 
 
@@ -35,8 +36,8 @@ class Userprofile(models.Model):
     def __str__(self):
         return f'{self.id}: profile from {self.user.username}'
 
-    @receiver(post_save, sender=User)
-    def create_registration_profile(sender, instance, **kwargs):
-        profile, created = Userprofile.objects.get_or_create(user=instance)
-        if created:
-            profile.save()
+    # @receiver(post_save, sender=User)
+    # def create_registration_profile(sender, instance, **kwargs):
+    #     profile, created = Userprofile.objects.get_or_create(user=instance)
+    #     if created:
+    #         profile.save()
