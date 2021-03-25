@@ -13,7 +13,7 @@ export default function Registration(props) {
         const credentials = {
             email: signUpEmail,
         }
-        const url = "https://backpain.propulsion-home.ch/backend/api/auth/registration/";
+        const url = "https://backpain.propulsion-learn.ch/backend/api/auth/registration/";
         const signUpConfig = {
             method: "POST",
             body: JSON.stringify(credentials),
