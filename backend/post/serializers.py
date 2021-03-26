@@ -1,6 +1,5 @@
 from rest_framework import serializers
 
-from backend import post
 from models import Post
 from userprofile.serializers import UserSerializer
 
