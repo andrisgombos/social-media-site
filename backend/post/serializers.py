@@ -16,7 +16,7 @@ class PostSerializer(serializers.ModelSerializer):
             return True
         return False
 
-    def get_is_from_logged_in_user(self, past):
+    def get_is_from_logged_in_user(self, post):
         user = self.context['request'].user
         if user == post.user:
             return True
