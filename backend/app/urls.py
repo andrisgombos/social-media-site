@@ -26,6 +26,8 @@ urlpatterns = [
     path('backend/api/auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('backend/api/auth/token/refresh/', TokenRefreshView.as_view(), name='retrieve-refreshed-token'),
     path('backend/api/auth/token/verify/', TokenVerifyView.as_view(), name='verify-token'),
+    # social
+    path('backend/api/social/friends/', include('friendrequest.urls')),
 ]
 
 
